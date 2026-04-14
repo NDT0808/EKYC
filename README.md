@@ -34,3 +34,8 @@ EKYC/
 ├── test_train.py             # Script for model evaluation
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+
+## 5. Download Pre-trained Models
+...
+* [Download best.pt (YOLO Model) ở đây](https://drive.google.com/your-link-here) 
+* [Download yolov8n.pt ở đây](https://drive.google.com/your-link-here)
