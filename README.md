@@ -33,6 +33,8 @@ EKYC/
 ├── main_tesseract.py         # Main pipeline integrating OCR and Liveness
 ├── test_train.py             # Script for model evaluation
 
+```
+
 ## ⚙️ Installation & Setup
 
 **1. Clone the repository**
