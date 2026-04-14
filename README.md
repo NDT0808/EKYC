@@ -38,5 +38,5 @@ EKYC/
 
 ## 5. Download Pre-trained Models
 ...
-* [Download best.pt (YOLO Model) ở đây](https://drive.google.com/your-link-here) 
-* [Download yolov8n.pt ở đây](https://drive.google.com/your-link-here)
+* [Download best.pt (YOLO Model) ở đây](https://drive.google.com/file/d/1_zDyArjkX0E4wH1uX1L8FFolQA3VZTFQ/view?usp=drive_link)
+* [Download yolov8n.pt ở đây](https://drive.google.com/file/d/10UseXfQzZlndtx3D-Nh9M6QLFwdLKzFx/view?usp=drive_link)
