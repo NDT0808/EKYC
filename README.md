@@ -35,19 +35,4 @@ EKYC/
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 
-# 🛡️ eKYC System (Electronic Know Your Customer)
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?style=for-the-badge&logo=opencv)
-![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-yellow?style=for-the-badge)
-![Tesseract OCR](https://img.shields.io/badge/Tesseract-OCR-blueviolet?style=for-the-badge)
-
-An automated identity verification pipeline integrating robust Face Liveness Detection and Optical Character Recognition (OCR). Designed to ensure secure, spoof-proof, and efficient user authentication processes.
-
-## 🌟 Key Features
-
-* **Liveness Detection:** Identifies whether the face presented to the camera is a real, live person or a spoof attack (e.g., printed photo, screen replay) using Vision Transformer (ViT) / CNN models.
-* **Face Verification:** Extracts and compares facial features using **ArcFace** to match the user's live face with the ID card portrait.
-* **Information Extraction (OCR):** Accurately extracts text from identity documents using **Tesseract OCR**.
-* **Object Detection:** Utilizes **YOLO** for detecting ID cards and face cropping within the frame.
-* [Download Liveness Model here](#)
