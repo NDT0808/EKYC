@@ -1,0 +1,15 @@
+# Môi trường ảo và cache của Python
+venv/
+__pycache__/
+
+# Các thư mục cấu hình của trình soạn thảo (Visual Studio)
+.vs/
+.vscode/
+
+# Bỏ qua file model nặng (Sẽ xử lý ở bước 3)
+*.pt
+*.pth
+
+# Bỏ qua dataset và log quá trình train
+datasets/
+runs/

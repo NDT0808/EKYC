@@ -1,0 +1,16 @@
+names:
+- bottom_left
+- bottom_right
+- image_person
+- top_left
+- top_right
+nc: 5
+roboflow:
+  license: CC BY 4.0
+  project: idcccd-1lgnb-mqob5
+  url: https://universe.roboflow.com/tris-nexkg/idcccd-1lgnb-mqob5/dataset/1
+  version: 1
+  workspace: tris-nexkg
+test: ../test/images
+train: ../train/images
+val: ../valid/images
