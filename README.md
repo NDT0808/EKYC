@@ -37,12 +37,7 @@ EKYC/
 
 ## ⚙️ Installation & Setup
 
-**1. Clone the repository**
-```bash
-git clone [https://github.com/NDT0808/EKYC.git](https://github.com/NDT0808/EKYC.git)
-cd EKYC
-
 ## 5. Download Pre-trained Models
-...
+
 * [Download best.pt (YOLO Model) ở đây](https://drive.google.com/file/d/1_zDyArjkX0E4wH1uX1L8FFolQA3VZTFQ/view?usp=drive_link)
 * [Download yolov8n.pt ở đây](https://drive.google.com/file/d/10UseXfQzZlndtx3D-Nh9M6QLFwdLKzFx/view?usp=drive_link)
