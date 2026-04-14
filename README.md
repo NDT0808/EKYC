@@ -67,9 +67,9 @@ Linux (Ubuntu): sudo apt install tesseract-ocr
 **5. Download Pre-trained Models**
 ```bash
 Due to size constraints, model weights are not hosted on this repository. Please download them from the following links and place them in the project root directory:
-Download best.pt (YOLO Model) [here](https://drive.google.com/file/d/1_zDyArjkX0E4wH1uX1L8FFolQA3VZTFQ/view?usp=drive_link)
-Download yolov8n.pt [here](https://drive.google.com/file/d/1dW6A0_Q6KbT3nLPVtEj-_NQMGzRi_k3I/view?usp=drive_link)
-Download Liveness Model  [here](nguyenkhoa/vit_Liveness_detection_v1.0)
+Download best.pt (YOLO Model) [https://drive.google.com/file/d/1_zDyArjkX0E4wH1uX1L8FFolQA3VZTFQ/view?usp=drive_link]
+Download yolov8n.pt [https://drive.google.com/file/d/1dW6A0_Q6KbT3nLPVtEj-_NQMGzRi_k3I/view?usp=drive_link]
+Download Liveness Model [nguyenkhoa/vit_Liveness_detection_v1.0]
 ```
 
 ## 🚀 Usage
