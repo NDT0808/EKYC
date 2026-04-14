@@ -34,3 +34,7 @@ EKYC/
 ├── test_train.py             # Script for model evaluation
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+
+* [Download best.pt (YOLO Model) here](#) 
+* [Download yolov8n.pt here](#)
+* [Download Liveness Model here](#)
