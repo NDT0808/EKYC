@@ -1,15 +1,36 @@
-Giới thiệu: Tóm tắt project eKYC (ví dụ: Liveness detection kết hợp OCR dùng Tesseract và YOLO).
+# 🛡️ eKYC System (Electronic Know Your Customer)
 
-Hướng dẫn cài đặt (dành cho người clone):
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?style=for-the-badge&logo=opencv)
+![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-yellow?style=for-the-badge)
+![Tesseract OCR](https://img.shields.io/badge/Tesseract-OCR-blueviolet?style=for-the-badge)
 
-Clone repo: git clone [link-github-của-bạn]
+An automated identity verification pipeline integrating robust Face Liveness Detection and Optical Character Recognition (OCR). Designed to ensure secure, spoof-proof, and efficient user authentication processes.
 
-Tạo môi trường ảo mới: python -m venv venv
+## 🌟 Key Features
 
-Kích hoạt môi trường: .\venv\Scripts\activate (trên Windows)
+* **Liveness Detection:** Identifies whether the face presented to the camera is a real, live person or a spoof attack (e.g., printed photo, screen replay) using Vision Transformer (ViT) / CNN models.
+* **Face Verification:** Extracts and compares facial features using **ArcFace** to match the user's live face with the ID card portrait.
+* **Information Extraction (OCR):** Accurately extracts text from identity documents using **Tesseract OCR**.
+* **Object Detection:** Utilizes **YOLO** for detecting ID cards and face cropping within the frame.
 
-Cài đặt thư viện: pip install -r requirements.txt
+## 🛠️ Technology Stack
 
-Tải Model Weights: Chèn link Google Drive (từ Bước 3) vào đây. Ghi chú rõ: "Vui lòng tải file best.pt và đặt vào thư mục gốc của project trước khi chạy."
+* **Programming Language:** Python
+* **Computer Vision:** OpenCV
+* **Deep Learning Frameworks:** PyTorch, Ultralytics (YOLO)
+* **OCR Engine:** Tesseract
+* **Face Recognition:** DeepFace (ArcFace model)
 
-Chạy chương trình: Cung cấp lệnh cụ thể, ví dụ: python main_tesseract.py.
+## 📁 Project Structure
+
+```text
+EKYC/
+├── datasets/                 # Sample images for testing (Not tracked by Git)
+├── idCCCD-1/                 # ID card dataset/processing 
+├── runs/                     # YOLO training logs and weights
+├── Liveness_detection.py     # Core liveness detection module
+├── main_tesseract.py         # Main pipeline integrating OCR and Liveness
+├── test_train.py             # Script for model evaluation
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
