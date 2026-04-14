@@ -34,6 +34,7 @@ EKYC/
 ├── test_train.py             # Script for model evaluation
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+```text
 
 ## 5. Download Pre-trained Models
 ...
