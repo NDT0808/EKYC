@@ -32,7 +32,12 @@ EKYC/
 ├── Liveness_detection.py     # Core liveness detection module
 ├── main_tesseract.py         # Main pipeline integrating OCR and Liveness
 ├── test_train.py             # Script for model evaluation
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
+
+## ⚙️ Installation & Setup
+
+**1. Clone the repository**
+```bash
+git clone [https://github.com/NDT0808/EKYC.git](https://github.com/NDT0808/EKYC.git)
+cd EKYC
 
 
