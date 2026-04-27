@@ -13,17 +13,18 @@ import time
 import os
 
 # --- CẤU HÌNH ---
-REFERENCE_IMAGE_PATH = "datasets/Trong.jpg"
+REFERENCE_IMAGE_PATH = "datasets/trong.png"
 PERSON_NAME = os.path.splitext(os.path.basename(REFERENCE_IMAGE_PATH))[0].upper()
 
-YOLO_MODEL_PATH = "best.pt"
+pt_model_path = "runs/train/yolo11n_custom/weights/best.pt"
+tflite_model_path = "runs/train/yolo11n_custom/weights/best_saved_model/best_float32.tflite" 
 WEBCAM_ID = 1
  
 # Cấu hình chung và các model
 DETECTOR_BACKEND = "opencv"
 LIVENESS_MODEL_NAME = "nguyenkhoa/vit_Liveness_detection_v1.0"
 DEEPFACE_MODEL_NAME = "ArcFace"
-DISTANCE_THRESHOLD = 0.55
+DISTANCE_THRESHOLD = 0.6
 
 # Cấu hình tối ưu hóa hiệu năng
 FRAME_WIDTH = 640
@@ -69,17 +70,43 @@ def run_live_face_matching():
         print("[INFO] Đang tải các model...")
         liveness_processor = AutoImageProcessor.from_pretrained(LIVENESS_MODEL_NAME)
         liveness_model = AutoModelForImageClassification.from_pretrained(LIVENESS_MODEL_NAME)
-        yolo_model = YOLO(YOLO_MODEL_PATH)
+        
+        print("[INFO] Đang tải YOLO PyTorch và TFLite...")
+        yolo_model_pt = YOLO(pt_model_path)
+        yolo_model_tflite = YOLO(tflite_model_path)
         
         print(f"[INFO] Đang xử lý ảnh tham chiếu: {REFERENCE_IMAGE_PATH}")
         reference_img_full = cv2.imread(REFERENCE_IMAGE_PATH)
         if reference_img_full is None: raise ValueError(f"Không thể đọc ảnh: {REFERENCE_IMAGE_PATH}")
 
-        results = yolo_model(reference_img_full)
+        # Warm-up (Mồi)
+        yolo_model_pt.predict(reference_img_full, verbose=False)
+        yolo_model_tflite.predict(reference_img_full, verbose=False)
+
+        # Đo tốc độ PyTorch
+        start_pt = time.time()
+        _ = yolo_model_pt.predict(reference_img_full, verbose=False)
+        time_pt = (time.time() - start_pt) * 1000
+
+        # Đo tốc độ TFLite
+        start_tflite = time.time()
+        results = yolo_model_tflite.predict(reference_img_full, verbose=False)
+        time_tflite = (time.time() - start_tflite) * 1000
+
+        fps_pt = 1000 / time_pt if time_pt > 0 else 0
+        fps_tflite = 1000 / time_tflite if time_tflite > 0 else 0
+
+        print("\n" + "="*50)
+        print("📊 SO SÁNH TỐC ĐỘ CẮT ẢNH THỰC TẾ (INFERENCE)")
+        print("="*50)
+        print(f"1. PyTorch (.pt):     {time_pt:.2f} ms | ~{fps_pt:.1f} FPS")
+        print(f"2. TFLite (.tflite):  {time_tflite:.2f} ms | ~{fps_tflite:.1f} FPS")
+        print("="*50 + "\n")
+
         reference_face_crop = None
         for r in results:
             for box in r.boxes:
-                if yolo_model.names[int(box.cls[0])] == 'image_person':
+                if yolo_model_tflite.names[int(box.cls[0])] == 'image_person':
                     x1, y1, x2, y2 = box.xyxy[0].cpu().numpy().astype(int)
                     face_crop_original = reference_img_full[y1:y2, x1:x2]
                     reference_face_crop = imutils.rotate_bound(face_crop_original, -90)
