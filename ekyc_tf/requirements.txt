@@ -1,0 +1,17 @@
+# eKYC CCCD — KerasCV YOLOv8 pipeline
+# Python 3.10+  |  TF 2.16+  |  Keras 3+
+#
+# Cài đặt:
+#   pip install -r requirements.txt
+#
+# Ghi chú: KHÔNG dùng tf-models-official (TF OD API) vì tf.estimator
+# đã bị xóa hoàn toàn từ TF 2.16+ — pipeline này thay thế bằng keras-cv.
+
+tensorflow>=2.16.0
+keras>=3.0.0
+keras-cv>=0.9.0
+Pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.9.0
+tqdm>=4.66.0
+matplotlib>=3.8.0
