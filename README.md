@@ -8,7 +8,7 @@
 An automated identity verification pipeline integrating robust Face Liveness Detection and Optical Character Recognition (OCR). Designed to ensure secure, spoof-proof, and efficient user authentication processes.
 
 <p align="center">
-  <img src="https://github.com/NDT0808/EKYC/blob/main/assets/DemoEKYC.mp4" width="700" alt="EKYC Pipeline Demo">
+  <img src="assets/DemoEKYC.mp4" width="700" alt="EKYC Pipeline Demo">
 </p>
 
 ## 🌟 Key Features
