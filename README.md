@@ -7,12 +7,6 @@
 
 An automated identity verification pipeline integrating robust Face Liveness Detection and Optical Character Recognition (OCR). Designed to ensure secure, spoof-proof, and efficient user authentication processes.
 
-<p align="center">
-  <a href="https://www.loom.com/share/6a83a717569e46ee80005044384aee53 target="_blank"">
-    <img src="assets/thumbnail.png" width="700" alt="Bấm để xem Video Demo EKYC trên Loom">
-  </a>
-</p>
-
 ## 🌟 Key Features
 
 * **Liveness Detection:** Identifies whether the face presented to the camera is a real, live person or a spoof attack (e.g., printed photo, screen replay) using Vision Transformer (ViT) / CNN models.
