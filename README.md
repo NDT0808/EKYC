@@ -8,7 +8,9 @@
 An automated identity verification pipeline integrating robust Face Liveness Detection and Optical Character Recognition (OCR). Designed to ensure secure, spoof-proof, and efficient user authentication processes.
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/NDT0808/EKYC/main/assets/DemoEKYC.mp4" width="700" controls autoplay muted loop></video>
+  <a href="https://www.loom.com/share/6a83a717569e46ee80005044384aee53 target="_blank"">
+    <img src="assets/thumbnail.png" width="700" alt="Bấm để xem Video Demo EKYC trên Loom">
+  </a>
 </p>
 
 ## 🌟 Key Features
