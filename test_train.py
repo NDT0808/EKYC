@@ -8,7 +8,7 @@ import os
 # --- CẤU HÌNH ---
 # Cảnh báo: Batch 128 rất lớn cho RTX 3050 (VRAM 4GB/6GB). 
 # Nếu bị lỗi "Out of Memory", hãy giảm xuống 16 hoặc 32.
-BATCH_SIZE = 16  
+BATCH_SIZE = 16 
 WORKERS = 0      # Trên Windows nên để 0 để tránh lỗi đa luồng
 
 # Kiểm tra GPU
@@ -93,7 +93,7 @@ if __name__ == '__main__':
         data=f"{dataset.location}/data.yaml", 
         
         # Tham số training
-        epochs=1,            
+        epochs=50,            
         imgsz=640,             
         batch=BATCH_SIZE,      
         optimizer='AdamW',     

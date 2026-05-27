@@ -13,12 +13,12 @@ import time
 import os
 
 # --- CẤU HÌNH ---
-REFERENCE_IMAGE_PATH = "datasets/trong.png"
+REFERENCE_IMAGE_PATH = "datasets/trong.jpg"
 PERSON_NAME = os.path.splitext(os.path.basename(REFERENCE_IMAGE_PATH))[0].upper()
 
 pt_model_path = "runs/train/yolo11n_custom/weights/best.pt"
 tflite_model_path = "runs/train/yolo11n_custom/weights/best_saved_model/best_float32.tflite" 
-WEBCAM_ID = 1
+WEBCAM_ID = 0
  
 # Cấu hình chung và các model
 DETECTOR_BACKEND = "opencv"
@@ -252,19 +252,3 @@ def run_live_face_matching():
 
 if __name__ == "__main__":
     run_live_face_matching()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

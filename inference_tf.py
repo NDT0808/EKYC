@@ -21,7 +21,7 @@ tf_model = YOLO(tflite_model_path)
 # ==========================================
 # ĐƯỜNG DẪN ẢNH CẦN NHẬN DIỆN
 # (Bạn có thể đổi tên file ảnh khác trong thư mục test để demo nhiều trường hợp)
-test_image = "datasets/bao.jpg"
+test_image = "datasets/Buu.jpg"
 
 print(f"🔍 Đang tiến hành nhận diện CCCD trên ảnh: {test_image}")
 
