@@ -7,6 +7,9 @@
 
 An automated identity verification pipeline integrating robust Face Liveness Detection and Optical Character Recognition (OCR). Designed to ensure secure, spoof-proof, and efficient user authentication processes.
 
+<img width="1634" height="996" alt="Ekyc_img" src="https://github.com/user-attachments/assets/99a7e0eb-50f9-47cf-8148-4b902b96ea4e" />
+
+
 ## 🌟 Key Features
 
 * **Liveness Detection:** Identifies whether the face presented to the camera is a real, live person or a spoof attack (e.g., printed photo, screen replay) using Vision Transformer (ViT) / CNN models.
